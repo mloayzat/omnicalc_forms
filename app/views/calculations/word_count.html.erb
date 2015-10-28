@@ -1,0 +1,23 @@
+        <div class="col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Word Count Results</h3>
+            </div>
+          <div class="panel-body">
+            <dl class="dl-horizontal">
+              <dt>Text</dt>
+              <dd><%=@text%></dd>
+               <dt>Word Count</dt>
+              <dd><%=@text.split.count%></dd>
+               <dt>Character Count (with <p>spaces)</p></dt>
+              <dd><%=@text.length%></dd>
+               <dt>Character Count <p>(without spaces)</p></dt>
+              <dd><%=@text.gsub(" ","").length%></dd>
+               <dt>Occurrences of </dt>
+              <dd><%=@text.downcase.split.count(@special_word)%></dd>
+              
+            </dl>
+             
+            </form>
+          </div>
+        </div>
